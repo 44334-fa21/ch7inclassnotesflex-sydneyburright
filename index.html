@@ -11,27 +11,27 @@ body {font-family: Verdana, Arial, sans-serif;
       background-color: #330000;
 }
 header, h1, #wrapper{ margin-top: 0; }
-#wrapper {  background-color: #F4E8BC; 
+#wrapper {  background-color: #F4E8BC;
 	        width: 90%;
 			margin: auto;
             color: #330000;
-} 
+}
 h1, h2 { color: #003300; }
 header { background-image: url(header.jpg);
-         background-repeat: no-repeat;  	
-		 background-size: cover; 
+         background-repeat: no-repeat;
+		 background-size: cover;
 }
 h1 { text-align: center;
       font-size: 300%;
 	 padding: 5% 0;
-     text-shadow: 3px 3px 3px #F4E8BC;	
+     text-shadow: 3px 3px 3px #F4E8BC;
 }
-nav, main, aside {  padding: 0 1em; 
+nav, main, aside {  padding: 0 1em;
 }
-img { width: 100%; 
+img { width: 100%;
       height: auto;
 }
-nav ul { list-style-type: none; 
+nav ul { list-style-type: none;
          font-size: 1.2em;
 		 padding-left: 0;
 }
@@ -45,16 +45,27 @@ footer { text-align: center;
 		 color: #003300;
 		 padding: 2.5%;
 }
+#demo {display: flex;
+        flex-direction: row;}
+nav {flex: 1;}
+main {flex: 7;}
+aside {flex: 2;}
+
 @media only screen and (max-width: 1024px) {
-            body { margin: 0; padding: 0; } 
+            body { margin: 0; padding: 0; }
             #wrapper { width: auto; margin: 0; }
 		    h1 { font-size: 200%; }
-			nav li { padding: 0 0.5em; 
+			nav li { padding: 0 0.5em;
 				     font-size: 1.2em; 	}
-			
-}		
+      #demo {flex-direction: column;}
+      nav ul {display: flex;
+              flex-direction: row;
+            justify-content: center;
+          }
+}
 @media only screen and (max-width: 768px) {
-         	
+  nav {order: 1;}
+  nav ul {flex-wrap: wrap;}
 }
 header, main, nav, footer, figure, figcaption { display: block; }
 </style>
@@ -63,17 +74,17 @@ header, main, nav, footer, figure, figcaption { display: block; }
 <div id="wrapper">
   <header>
     <h1>Casita Sedona</h1>
-  </header>  
-  <div>
+  </header>
+  <div id="demo">
   <nav>
     <ul>
 	 <li><a href="index.html">Home</a></li>
      <li><a href="rooms.html">Rooms</a></li>
      <li><a href="specials.html">Specials</a></li>
      <li><a href="contact.html">Contact</a></li>
-	</ul> 
+	</ul>
    </nav>
-   <main>   
+   <main>
 	<h2>Located in the Heart of Sedona</h2>
     <p>At Casita Sedona Bed &amp; Breakfast you&#39;ll be close to art galleries, shops, restaurants, hiking trails, and tours. Ride the free trolley to shops and galleries.</p>
     <h2>Luxurious Rooms </h2>
@@ -82,7 +93,7 @@ header, main, nav, footer, figure, figcaption { display: block; }
     <p>Each day begins with a hearty breakfast that includes your choice of belgian waffles, pumpkin french toast, or quiche. Fresh fruit, yogurt, juice, and coffee are always available.</p>
 	<h2>About Your Hosts</h2>
 	<p>Your hosts, Melanie and Greg Tortuga, are long-time Sedona residents who love to share their knowledge of the Sedona area with their guests. Melanie is an author and artist. Greg has years of experience leading jeep tours and guiding hikes in and around Sedona.</p>
-   </main> 
+   </main>
    <aside>
    <img src="pools.jpg"  alt="Pools of water in the rock">
 	 <h2>Guided Hikes</h2>
